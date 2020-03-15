@@ -12,8 +12,8 @@ int init_event(event_t *ev)
     ev->on = 1;
     ev->ret_value = 0;
     ev->line_on = 1;
-    ev->select_mode = 2;
-    ev->select_effect = 1;
+    ev->select_mode = 0;
+    ev->select_effect = 0;
     ev->mouse_moved = 1;
     ev->zoom = 1;
     ev->rotate_h = 0;
