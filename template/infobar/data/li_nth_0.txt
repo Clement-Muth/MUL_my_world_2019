@@ -1,0 +1,7 @@
+New File                   Ctrl+N
+New Window             Ctrl+Maj+N
+Open File                  Ctrl+O
+Open Folder... [Ctrl+K Ctrl+O]
+Save                       Ctrl+S
+Save As...             Ctrl+Maj+S
+Exit                       Ctrl+D

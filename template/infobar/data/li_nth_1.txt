@@ -1,0 +1,5 @@
+Undo                       Ctrl+Z
+Redo                       Ctrl+Y
+Cut                        Ctrl+X
+Copy                       Ctrl+C
+Paste                      Ctrl+V
