@@ -60,16 +60,17 @@ root_t *root)
 void put_object_on_screen(cw_t *cw, map_t *maps, template_t *template)
 {
     if (cw->ev.mouse_moved == 1) {
+        sfRenderWindow_clear(cw->window, sfBlack);
+        framebuffer_display(cw, maps);
         display_title_map(cw, maps);
-        sfRenderWindow_drawSprite(cw->window, cw->sprite, NULL);
-        cw->ev.mouse_moved = 0;
-        draw_template(cw->window, template, maps, &cw->ev);
         sfTexture_updateFromPixels(cw->texture, cw->buffer->pixels,
         cw->width, cw->height, 0, 0);
-        framebuffer_display(cw, maps);
+        sfSprite_setTexture(cw->sprite, cw->texture, sfFalse);
+        sfRenderWindow_drawSprite(cw->window, cw->sprite, NULL);
+        draw_template(cw->window, template, maps, &cw->ev);
         sfRenderWindow_display(cw->window);
-        sfRenderWindow_clear(cw->window, sfBlack);
         restore_framebuffer(cw->buffer);
+        cw->ev.mouse_moved = 0;
     }
     if (cw->ev.on == 1)
         restore_maps(cw, maps);
