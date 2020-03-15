@@ -28,7 +28,7 @@ void
 draw_menu(sfRenderWindow *window, root_t *root, template_t *template);
 
 void
-draw_editor(sfRenderWindow *window, root_t *root, template_t *template,
+draw_editor(sfRenderWindow *window, template_t *template,
 map_t *map, event_t *event);
 
 sfBool

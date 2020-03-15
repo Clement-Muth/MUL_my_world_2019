@@ -26,8 +26,7 @@ init_div_section(_div_t *div, int section, int left_pos)
         if (separator[index] == i) index++;
         div->li[i].hovering = sfFalse;
         create_rect_shape(&div->li[i].li, (sfVector2f){350, 30}, \
-        (sfVector2f){left_pos, y - 5}, \
-        BLUE_HOVER);
+        (sfVector2f){left_pos, y - 5}, BLUE_HOVER);
     }
     x += 50;
     return (true);

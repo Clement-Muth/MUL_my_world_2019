@@ -42,7 +42,7 @@ static void space_handling(int *space, char *str, char sep_one, char sep_two)
             terms = 0;
         }
     }
-    if (e!= 0 && str[e - 1] != sep_one && str[e - 1] != sep_two)
+    if (e != 0 && str[e - 1] != sep_one && str[e - 1] != sep_two)
         space[inc] = (e - begin) + 1;
 }
 

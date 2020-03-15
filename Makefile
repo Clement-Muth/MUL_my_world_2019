@@ -54,7 +54,6 @@ LEFTBAR_EVENT			=	event_change_section.c	\
 ## ========================================================================== ##
 PATH_EDITOR		=	source/scene/editor/
 EDITOR			=	draw_editor.c	\
-					init_editor.c	\
 
 
 ## ========================================================================== ##

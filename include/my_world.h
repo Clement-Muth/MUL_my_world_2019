@@ -44,13 +44,11 @@
 #include "lib/my.h"
 #include "lib/my_getline.h"
 
-#include "library/array/array.h"
 #include "library/csfml/csfml.h"
 #include "library/csfml/define_csfml.h"
 #include "library/csfml/function_csfml.h"
 #include "library/csfml/macro_csfml.h"
 #include "library/csfml/struct_csfml.h"
-#include "library/linked_list/lib_linked_list.h"
 
 #include "prototype/function.h"
 #include "prototype/proto_area.h"

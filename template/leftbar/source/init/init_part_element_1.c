@@ -26,7 +26,7 @@ init_part_section1_element1(left_part_t *part)
 sfBool
 init_part_section2_element1(left_part_t *part)
 {
-     for (int i = 0, y = 172; 2 != i; i++, y += 62) {
+    for (int i = 0, y = 172; 2 != i; i++, y += 62) {
         create_rect_shape(&part[i].shape_button_part, (sfVector2f){45, 45},
         (sfVector2f){180, y}, sfRed);
         if (!part[i].shape_button_part) return (sfFalse);

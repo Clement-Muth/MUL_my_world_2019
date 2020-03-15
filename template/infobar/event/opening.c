@@ -15,6 +15,18 @@ static void close_all(int current, _div_t *div)
     }
 }
 
+static void event()
+{
+    if (sfMouse_isButtonPressed(sfMouseLeft) && !root->nav->div[i].draw) {
+        close_all(i, root->nav->div);
+        root->nav->div[i].draw = true;
+        root->nav->li[i].draw = true;
+    } else if (sfMouse_isButtonPressed(sfMouseLeft) && root->nav->div[i].draw) {
+        root->nav->div[i].draw = false;
+        root->nav->li[i].draw = false;
+    }
+}
+
 void opening(sfRenderWindow *window, root_t *root)
 {
     sfFloatRect rect;
@@ -24,14 +36,7 @@ void opening(sfRenderWindow *window, root_t *root)
         rect = sfRectangleShape_getGlobalBounds(root->nav->ul[i].ul);
         pos = sfMouse_getPositionRenderWindow(window);
         if (HOVER) {
-            if (sfMouse_isButtonPressed(sfMouseLeft) && !root->nav->div[i].draw) {
-                close_all(i, root->nav->div);
-                root->nav->div[i].draw = true;
-                root->nav->li[i].draw = true;
-            }
-            else if (sfMouse_isButtonPressed(sfMouseLeft) && root->nav->div[i].draw)
-                root->nav->div[i].draw = false;
-                root->nav->li[i].draw = false;
+            event();
         }
     }
 }

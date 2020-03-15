@@ -38,16 +38,39 @@ cursor_hovering(sfRenderWindow *window, menu_t *menu)
     if (!hovering) window_setcursor(window, create_cursor(sfCursorArrow));
 }
 
+int usage(int argc, char **argv)
+{
+    if (my_strcmp(argv[1], "-h", 0) == 0) {
+        my_putstr("Usage: ./my_word [no option]\n");
+        my_putstr("Shortcut:\n\n");
+        my_putstr("Ctrl+O        Open a file\nCtrl+N        Create a file\n");
+        my_putstr("Ctrl+D        Exit\n");
+        my_putstr("Escape        Close little window");
+        my_putstr("Arrow keys    Moving around the map\n");
+        my_putstr("Key V         Save the map\n");
+        my_putstr("Key B         Load last save\nOpen last save");
+        my_putstr("Key S         Move the sun light around the map\n");
+        my_putstr("Key X && C    Move view backward, forward\n");
+        my_putstr("Key A && Z    Extend, decrease circle shrink\n");
+        my_putstr("Press E       To switch effect mode\n");
+        my_putstr("Press P       To switch selection mode\n");
+        my_putstr("Press O       To switch with or without line\n");
+        my_putstr("Press R       To reset the map\n");
+        return (0);
+    }
+    return (1);
+}
+
 int
 main(int ac, char **av)
 {
     sfRenderWindow *window = sfRenderWindow_create((sfVideoMode){VIEWPORT}
     , "My World", sfResize | sfClose, NULL);
     sfEvent event;
-    template_t template;
-    root_t root;
+    template_t template;root_t root;
     const sfUint8 *icon =  sfImage_getPixelsPtr(sfImage_createFromFile(ICON));
 
+    if (ac >= 2 && usage(ac, av) == 0) return (0);
     init_scene(&root);
     sfRenderWindow_setIcon(window, 1920, 1080, icon);
     if (!init_template(window, &template));

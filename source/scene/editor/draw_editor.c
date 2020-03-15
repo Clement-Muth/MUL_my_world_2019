@@ -8,7 +8,7 @@
 #include "my_world.h"
 
 void
-draw_editor(sfRenderWindow *window, root_t *root, template_t *template,
+draw_editor(sfRenderWindow *window, template_t *template,
 map_t *map, event_t *event)
 {
     draw_template(window, template, map, event);
