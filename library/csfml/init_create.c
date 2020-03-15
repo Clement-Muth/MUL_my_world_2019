@@ -30,7 +30,6 @@ event_write(int i, sfText *text, char *str, char data)
 void
 init_create(createf_t *create, char *filename)
 {
-    printf("init\n");
     create->filename = filename;
     create->new = 0;
 }
