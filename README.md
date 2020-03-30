@@ -4,6 +4,7 @@ This project is one of the freest project of your first year. Create your own RP
 Your main challenge for this game will be to create a complete product using everything that you and your
 team know.
 Your game must follow the following rules:
+
         • The player needs to have characteristics which you can find in the status menu.
         • The player can fight enemies, statistics will impact the fights results.
         • There must be NPC in your game.
@@ -11,8 +12,10 @@ Your game must follow the following rules:
         • The player must have an inventory which can contain a limited set of items.
         • The player can earn experience by winning fights and accomplishing specific actions.
         • With enough experience, the player can level up, upgrading its statistics.
+        
 To give the users the feeling that you’re delivering a complete product you need to polish as much as possible
 your game.
+
         • Having a pleasant user interface.
         • Create a coherent universe (visual assets, audio assets, scenario, ...)
         • Create a funny game where the player has at least one goal.
@@ -23,6 +26,7 @@ your game.
 MANDATORY
 
 The following features are mandatory (if your project is missing one of them it will not be evaluated further):
+
         • the window can be closed using events,
         • the game manages the input from the mouse click and keyboard,
         • the game contains animated sprites rendered thanks to sprite sheets,
@@ -33,6 +37,7 @@ TECHNICAL REQUIEREMENTS
 
 This project, being the last project of the module, the following requierement are the mathematical and
 technical parts which has to be present in your final project:
+
         • A collision system including moving and static elements with different shapes.
         • A simple particle system that can display at least 2 types of particles.
         • Particle effects (changing colors, scaling, bouncing, fading) to simulate realistic environment (wind,
@@ -43,6 +48,7 @@ technical parts which has to be present in your final project:
 MUST
 
 The game must have:
+
         • A starting menu with at least two buttons, one to launch a game, and one to quit the game.
         • Anescapekey to pause the game when launched.
         • A menu when the game is paused with at least two buttons, one to go to the starting menu and the
@@ -51,6 +57,7 @@ The game must have:
         • An inventory and status menu.
     
 SHOULD
+
         • Your window should stick between 800x600 pixels and 1920x1080 pixels.
         • The game should have an “How To play” menu, explaining how to play your game.
         • The game should have NPC with whom the player can interact (fight, quest, discuss).
@@ -63,6 +70,7 @@ SHOULD
 COULD
 
 The game could:
+
         • let the player save and load its own save.
         • let the user customize its character.
         • have different types of enemies.
